@@ -1,0 +1,69 @@
+.contenedor-navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 100px;
+    margin-top: 30px;
+}
+
+
+.header-logo{
+    z-index: 50;
+    width: 150px;
+    animation: aparece-logo 2s forwards;
+}
+
+@keyframes aparece-logo{
+    0%{transform: translateY(-30px); filter: opacity(0);}
+    100%{transform: translateY(0); filter: opacity(1);}
+}
+
+.header-enlaces{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 50;
+    width: 60%;
+    background: rgba(34, 192, 195, 0.5);
+    background: linear-gradient(108deg, rgba(34, 192, 195, 0.5) 0%, rgba(47, 116, 18, 0.5) 100%);
+    height: 75%;
+    border-radius: 30px;
+    overflow: hidden;
+    filter: opacity(0);
+    animation: aparece-navBar 2s 1s forwards;
+
+    && a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+
+
+    &&:hover {
+        background-color: #1b9980;
+        transition: all .3s linear;
+    }
+}
+}
+
+@keyframes aparece-navBar{
+    0%{transform: translateY(-30px); filter: opacity(0);}
+    100%{transform: translateY(0); filter: opacity(1);}
+}
+
+
+.header-img{
+    width: 100%;
+    filter: blur(3px) brightness(80%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
